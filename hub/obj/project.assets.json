@@ -7598,9 +7598,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ADMIN\\source\\repos\\hub\\hub\\hub.csproj",
-      "projectName": "hub",
-      "projectPath": "C:\\Users\\ADMIN\\source\\repos\\hub\\hub\\hub.csproj",
+      "projectUniqueName": "C:\\Users\\ADMIN\\source\\repos\\hub\\hub\\Signal.csproj",
+      "projectName": "Signal",
+      "projectPath": "C:\\Users\\ADMIN\\source\\repos\\hub\\hub\\Signal.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\ADMIN\\source\\repos\\hub\\hub\\obj\\",
       "projectStyle": "PackageReference",

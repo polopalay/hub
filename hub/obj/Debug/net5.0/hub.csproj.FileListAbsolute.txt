@@ -376,14 +376,6 @@ C:\Users\ADMIN\source\repos\hub\hub\obj\Debug\net5.0\hub.TagHelpers.input.cache
 C:\Users\ADMIN\source\repos\hub\hub\obj\Debug\net5.0\hub.TagHelpers.output.cache
 C:\Users\ADMIN\source\repos\hub\hub\obj\Debug\net5.0\hub.RazorCoreGenerate.cache
 C:\Users\ADMIN\source\repos\hub\hub\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
-C:\Users\ADMIN\source\repos\hub\hub\obj\Debug\net5.0\Razor\Pages\Error.cshtml.g.cs
-C:\Users\ADMIN\source\repos\hub\hub\obj\Debug\net5.0\Razor\Pages\Index.cshtml.g.cs
-C:\Users\ADMIN\source\repos\hub\hub\obj\Debug\net5.0\Razor\Pages\Privacy.cshtml.g.cs
-C:\Users\ADMIN\source\repos\hub\hub\obj\Debug\net5.0\Razor\Pages\Shared\_Layout.cshtml.g.cs
-C:\Users\ADMIN\source\repos\hub\hub\obj\Debug\net5.0\Razor\Pages\Shared\_LoginPartial.cshtml.g.cs
-C:\Users\ADMIN\source\repos\hub\hub\obj\Debug\net5.0\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
-C:\Users\ADMIN\source\repos\hub\hub\obj\Debug\net5.0\Razor\Pages\_ViewImports.cshtml.g.cs
-C:\Users\ADMIN\source\repos\hub\hub\obj\Debug\net5.0\Razor\Pages\_ViewStart.cshtml.g.cs
 C:\Users\ADMIN\source\repos\hub\hub\obj\Debug\net5.0\hub.RazorTargetAssemblyInfo.cache
 C:\Users\ADMIN\source\repos\hub\hub\obj\Debug\net5.0\hub.RazorTargetAssemblyInfo.cs
 C:\Users\ADMIN\source\repos\hub\hub\obj\Debug\net5.0\hub.Views.pdb
@@ -436,3 +428,9 @@ C:\Users\ADMIN\source\repos\hub\hub\bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnaly
 C:\Users\ADMIN\source\repos\hub\hub\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\ADMIN\source\repos\hub\hub\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\Users\ADMIN\source\repos\hub\hub\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
+C:\Users\ADMIN\source\repos\hub\hub\obj\Debug\net5.0\Razor\Areas\Hub\Views\Home\Index.cshtml.g.cs
+C:\Users\ADMIN\source\repos\hub\hub\obj\Debug\net5.0\Razor\Areas\Hub\Views\_ViewImports.cshtml.g.cs
+C:\Users\ADMIN\source\repos\hub\hub\obj\Debug\net5.0\Razor\Areas\Hub\Views\_ViewStart.cshtml.g.cs
+C:\Users\ADMIN\source\repos\hub\hub\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\ADMIN\source\repos\hub\hub\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\ADMIN\source\repos\hub\hub\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs

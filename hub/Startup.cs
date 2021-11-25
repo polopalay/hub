@@ -1,5 +1,5 @@
-using hub.Data;
-using hub.Signal;
+using Signal.Data;
+using Signal.Signal;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -8,7 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace hub
+namespace Signal
 {
     public class Startup
     {
@@ -24,10 +24,17 @@ namespace hub
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDatabaseDeveloperPageExceptionFilter();
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
-            services.AddRazorPages();
+            //services.AddDatabaseDeveloperPageExceptionFilter();
+            services.AddDefaultIdentity<IdentityUser>(options =>
+            {
+                options.SignIn.RequireConfirmedAccount = true;
+                options.Password.RequireDigit = false;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequiredLength = 3;
+                options.User.RequireUniqueEmail = false;
+            }).AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();
+            services.AddRazorPages().AddRazorRuntimeCompilation();
             services.AddSignalR();
         }
 
@@ -36,12 +43,6 @@ namespace hub
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseMigrationsEndPoint();
-            }
-            else
-            {
-                app.UseExceptionHandler("/Error");
-                app.UseHsts();
             }
 
             app.UseHttpsRedirection();
@@ -55,9 +56,10 @@ namespace hub
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
-                  name: "areas",
-                  pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+                  name: "default",
+                  pattern: "{area=Hub}/{controller=Home}/{action=Index}/{id?}"
                 );
+                endpoints.MapRazorPages();
                 endpoints.MapHub<ChatHub>("/chathub");
             });
         }

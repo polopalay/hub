@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace hub.Areas.Hub.Controllers
+namespace Signal.Areas.Hub.Controllers
 {
+    [Area("Hub")]
     public class HomeController : Controller
     {
         public IActionResult Index()

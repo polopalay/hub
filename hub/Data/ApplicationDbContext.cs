@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace hub.Data
+namespace Signal.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
