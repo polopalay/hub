@@ -5,10 +5,10 @@ namespace Signal.Signal
 {
     public class ChatHub : Hub
     {
-        public async Task Message(MessageModel message)
-        {
-            await Clients.Others.SendAsync(message.Id.ToString(), message);
-        }
+        //public async Task Message(MessageModel message)
+        //{
+        //    await Clients.All.SendAsync(message.Id.ToString(), message);
+        //}
     }
 
     public class MessageModel

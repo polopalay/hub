@@ -19,6 +19,6 @@ connection.onclose(async () => {
 });
 
 start();
-document.getElementById("btn").onclick = (event) => {
-    connection.invoke("message", { id: "1", message: "demo" });
-}
+//document.getElementById("btn").onclick = (event) => {
+//    connection.invoke("message", { id: "1", message: "demo" });
+//}
