@@ -1,4 +1,24 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿const connection = new signalR.HubConnectionBuilder()
+    .withUrl("/chathub")
+    .configureLogging(signalR.LogLevel.Information)
+    .build();
 
-// Write your JavaScript code.
+async function start() {
+    try {
+        connection.on("1", data => {
+            console.log(data);
+        });
+        await connection.start();
+    } catch (err) {
+        setTimeout(start, 5000);
+    }
+};
+
+connection.onclose(async () => {
+    await start();
+});
+
+start();
+document.getElementById("btn").onclick = (event) => {
+    connection.invoke("message", { id: "1", message: "demo" });
+}

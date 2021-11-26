@@ -25,14 +25,17 @@ namespace Signal
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
             //services.AddDatabaseDeveloperPageExceptionFilter();
-            services.AddDefaultIdentity<IdentityUser>(options =>
-            {
-                options.SignIn.RequireConfirmedAccount = true;
-                options.Password.RequireDigit = false;
-                options.Password.RequireNonAlphanumeric = false;
-                options.Password.RequiredLength = 3;
-                options.User.RequireUniqueEmail = false;
-            }).AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddIdentity<IdentityUser, IdentityRole>(options =>
+             {
+                 options.SignIn.RequireConfirmedAccount = true;
+                 options.Password.RequireDigit = false;
+                 options.Password.RequireNonAlphanumeric = false;
+                 options.Password.RequireLowercase = false;
+                 options.Password.RequireUppercase = false;
+                 options.Password.RequiredLength = 3;
+                 options.User.RequireUniqueEmail = false;
+             }).AddEntityFrameworkStores<ApplicationDbContext>()
+            .AddDefaultTokenProviders();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddRazorPages().AddRazorRuntimeCompilation();
             services.AddSignalR();
@@ -57,7 +60,7 @@ namespace Signal
             {
                 endpoints.MapControllerRoute(
                   name: "default",
-                  pattern: "{area=Hub}/{controller=Home}/{action=Index}/{id?}"
+                  pattern: "{area=Pages}/{controller=Home}/{action=Index}/{id?}"
                 );
                 endpoints.MapRazorPages();
                 endpoints.MapHub<ChatHub>("/chathub");

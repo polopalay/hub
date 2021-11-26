@@ -5,19 +5,15 @@ namespace Signal.Signal
 {
     public class ChatHub : Hub
     {
-        public Task SendMessage(string user, string message)
+        public async Task Message(MessageModel message)
         {
-            return Clients.All.SendAsync("ReceiveMessage", user, message);
+            await Clients.Others.SendAsync(message.Id.ToString(), message);
         }
+    }
 
-        public Task SendMessageToCaller(string user, string message)
-        {
-            return Clients.Caller.SendAsync("ReceiveMessage", user, message);
-        }
-
-        public Task SendMessageToGroup(string user, string message)
-        {
-            return Clients.Group("SignalR Users").SendAsync("ReceiveMessage", user, message);
-        }
+    public class MessageModel
+    {
+        public string Id { get; set; }
+        public string Message { get; set; }
     }
 }
