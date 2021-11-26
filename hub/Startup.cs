@@ -1,5 +1,4 @@
 using Signal.Data;
-using Signal.Signal;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -7,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Signal.Signal;
 
 namespace Signal
 {
@@ -63,7 +63,7 @@ namespace Signal
                   pattern: "{area=Pages}/{controller=Home}/{action=Index}/{id?}"
                 );
                 endpoints.MapRazorPages();
-                endpoints.MapHub<ChatHub>("/chathub");
+                endpoints.MapHub<TaskHub>("/hub");
             });
         }
     }
